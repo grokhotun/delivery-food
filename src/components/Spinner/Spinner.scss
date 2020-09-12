@@ -1,0 +1,26 @@
+.spinner {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__loader {
+        position: relative;
+        color: #fff;
+        animation: rotate 1s ease-in-out infinite;
+        width: 70px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+    }
+	100% {
+		transform: rotate(360deg);
+	}
+}

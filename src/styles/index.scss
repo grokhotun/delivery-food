@@ -1,0 +1,48 @@
+@import 'variables.scss';
+@import "null.scss";
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #f5f5f5 100%);
+}
+
+.container {
+	max-width: $maxwidth + px;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: $maxwidth1) {
+		max-width: 970px;
+	}
+	@media (max-width: $maxwidth2) {
+		max-width: 750px;
+	}
+	@media (max-width: $maxwidth3) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+.content {
+	padding: 100px 0;
+}
+
+.home-page {
+	&__title {}
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__link {
+		padding: 20px 60px;
+		background-color: #fe5f1e;
+		border-radius: 30px;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		color: #fff;
+		font-size: 22px;
+	}
+}

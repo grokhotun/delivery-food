@@ -1,0 +1,10 @@
+.error-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+    }
+}

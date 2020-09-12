@@ -1,0 +1,37 @@
+.promo {
+    box-shadow: 0 7px 12px rgba(158, 158, 163, 0.1);
+    border-radius: 10px;
+    padding: 70px;
+    margin-bottom: 56px;
+    &__title {
+        font-weight: bold;
+        font-size: 39px;
+        line-height: 46px;
+        color: #302c34;
+        max-width: 500px;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 28px;
+        color: #302c34;
+        max-width: 538px;
+    }
+}
+
+.pizza {
+    background: #fff1b8 url('../../assets/img/promo/pizza.png') no-repeat top -100px right -250px / 830px
+}
+
+.kebab {
+    background: #D6E4FF url('../../assets/img/promo/kebab.png') no-repeat top 45px right 40px / 450px;
+}
+
+.vegetables {
+    background: #FFF566 url('../../assets/img/promo/vegetables.png') no-repeat top 0 right 0 / 825px
+}
+
+.sushi {
+    background: #FFF1F0 url('../../assets/img/promo/sushi.png') no-repeat top 10px right 15px / 500px
+}

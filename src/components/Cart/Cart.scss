@@ -1,0 +1,271 @@
+.cart {
+	&--empty {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		& > * {
+		  &:not(:last-child) { margin: 0px 0px 30px 0px; }
+		}
+		.cart {
+			&__text {
+				text-align: center;
+				font-size: 18px;
+				line-height: 145.4%;
+				letter-spacing: 0.01em;
+				color: #777777;
+			}
+
+			&__img {
+				height: 300px;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}
+		}
+	}
+	&__header {
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+	&__title {
+		display: flex;
+		align-items: center;
+		font-size: 32px;
+		svg {
+			position: relative;
+			top: -2px;
+			width: 30px;
+			height: 30px;
+			margin-right: 10px;
+			path {
+				stroke: #000;
+				stroke-width: 1.9;
+			}
+		}
+	}
+
+	&__clear {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		span {
+			display: inline-block;
+			margin-left: 7px;
+			color: #b6b6b6;
+			font-size: 18px;
+		}
+
+		span,
+		svg,
+		path {
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover {
+			svg {
+				path {
+					stroke: darken($color: #b6b6b6, $amount: 50);
+				}
+			}
+			span {
+				color: darken($color: #b6b6b6, $amount: 50);
+			}
+		}
+	}
+
+	&__body {
+	}
+
+	&__footer {
+	}
+}
+
+.cart-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	border-top: 1px solid #b6b6b6;
+	padding: 30px;
+	&__img {
+		flex: 0 0 10%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+
+	&__info {
+		flex: 0 0 30%;
+		span {
+			display: block;
+			&:first-child{
+				font-weight: bold;
+				font-size: 22px;
+				line-height: 27px;
+				margin: 0px 0px 15px 0px;
+			}
+			&:last-child{
+				font-size: 18px;
+				color: #8d8d8d;
+			}
+		}
+	}
+
+
+	&__counter {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		span {
+			margin: 0 15px;
+			font-size: 22px;
+		}
+	}
+
+
+	&__btn {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		transition: .2s ease-in-out;
+		background-color: transparent;
+		&--minus {
+			border: 2px solid #EB5A1E;
+			&:hover{
+				background-color: #EB5A1E;
+				svg {
+					path {
+						fill: #fff;
+					}
+				}
+			}
+			svg {
+				path:first-of-type {
+					display: none;
+				}
+			}
+		}
+
+		&--plus {
+			border: 2px solid #EB5A1E;
+			&:hover{
+				background-color: #EB5A1E;
+				svg {
+					path {
+						fill: #fff;
+					}
+				}
+			}
+		}
+
+
+		&--remove {
+			display: flex;
+			align-items: center;
+			border: 2px solid #b6b6b6;
+			&:hover{
+				background-color: #000;
+				border: 2px solid #000;
+				svg {
+					path {
+						fill: #fff;
+					}
+				}
+			}
+			svg {
+				transform: rotate(45deg);
+
+				path {
+					fill: darken($color: #b6b6b6, $amount: 15);
+				}
+			}
+		}
+	}
+
+
+	&__price {
+		display: flex;
+		justify-content: center;
+		font-weight: bold;
+		font-size: 22px;
+		flex: 0 0 15%;
+	}
+
+
+	&__remove {
+	}
+}
+
+.footer-cart {
+	& > * {
+	  &:not(:last-child) { margin: 0px 0px 25px 0px; }
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__total-products {
+		font-size: 22px;
+		font-weight: bold;
+		span {
+			color: #EB5A1E;
+		}
+	}
+
+	&__total-price {
+		font-size: 22px;
+		font-weight: bold;
+		span {
+			color: #EB5A1E;
+		}
+	}
+
+	&__btn {
+		cursor: pointer;
+		padding: 10px 20px;
+		border-radius: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: .3s ease-in-out;
+		&--go-back {
+			border: 1px solid #b6b6b6;
+			color: #b6b6b6;
+			& > * {
+			  &:not(:last-child) { margin: 0px 15px 0px 0px; }
+			}
+			&:hover{
+				background-color: #000;
+				border: 1px solid #000;
+				color: #fff;
+			}
+		}
+
+		&--pay {
+			border: 1px solid #EB5A1E;
+			background-color: #EB5A1E;
+			color: #fff;
+			& > * {
+			  &:not(:last-child) { margin: 0px 15px 0px 0px; }
+			}
+			&:hover{
+				background-color: darken($color: #EB5A1E, $amount: 10);
+			}
+		}
+	}
+}
